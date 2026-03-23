@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hook-sink"
+version = "0.1.0"
+description = "Local webhook catcher: receive, inspect, edit, and replay webhooks without ngrok"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+authors = [{name = "Hook Sink Contributors"}]
+keywords = ["webhook", "debugging", "http", "replay", "developer-tools"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Environment :: Web Environment",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Testing",
+    "Topic :: Internet :: WWW/HTTP",
+]
+dependencies = [
+    "click>=8.0",
+    "fastapi>=0.100.0",
+    "uvicorn>=0.20.0",
+    "httpx>=0.24.0",
+    "jinja2>=3.1.0",
+    "rich>=13.0",
+]
+
+[project.scripts]
+hook-sink = "hook_sink.cli:cli"
+
+[project.urls]
+Homepage = "https://github.com/hook-sink/hook-sink"
+Repository = "https://github.com/hook-sink/hook-sink"
+
+[tool.setuptools.packages.find]
+include = ["hook_sink*"]
