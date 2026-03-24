@@ -1,5 +1,8 @@
 # hook-sink
 
+[![Built with Claude Code](https://img.shields.io/badge/Built%20with-Claude%20Code-blue?logo=anthropic&logoColor=white)](https://claude.ai/code)
+
+
 **Local webhook catcher: receive, inspect, edit, and replay webhooks without ngrok.**
 
 Stop guessing what webhooks look like. Catch them locally, inspect every header and byte, then replay them wherever you want.
